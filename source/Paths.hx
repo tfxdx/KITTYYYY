@@ -242,7 +242,7 @@ class Paths
 		var selectedFile:String = "";
 
 		#if sys
-		var files:Array<String> = sys.FileSystem.readDirectory(key);
+		var files:Array<String> = ["frase1", "frase2", "frase3", "frase4", "frase5"];
 		for (i in 0...files.length)
 		{
 			files[i] = StringTools.replace(files[i], ".png", "");
@@ -393,7 +393,7 @@ class Paths
 		// trace(gottenPath);
 		if(!currentTrackedSounds.exists(gottenPath)) 
 		#if MODS_ALLOWED
-			currentTrackedSounds.set(gottenPath, Sound.fromFile('./' + gottenPath));
+			currentTrackedSounds.set(gottenPath, Sound.fromFile(gottenPath));
 		#else
 			currentTrackedSounds.set(gottenPath, OpenFlAssets.getSound(getPath('$path/$key.$SOUND_EXT', SOUND, library)));
 		#end
