@@ -13,6 +13,7 @@ import flixel.util.FlxColor;
 import flixel.util.FlxGradient;
 import flixel.FlxState;
 import flixel.FlxBasic;
+import flixel.FlxCamera;
 
 class MusicBeatState extends FlxUIState
 {
