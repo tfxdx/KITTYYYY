@@ -1882,15 +1882,18 @@ class ChartingState extends MusicBeatState
 		if (OpenFlAssets.exists(leVocals)) { //Vanilla inst
 			audioBuffers[0] = AudioBuffer.fromFile('./' + leVocals.substr(6));
 			//trace('Inst found');
+		}
 
 		if(audioBuffers[1] != null) {
 			audioBuffers[1].dispose();
 		}
+
 		audioBuffers[1] = null;
 		var leVocals:String = Paths.getPath(currentSongName + '/Voices.' + Paths.SOUND_EXT, SOUND, 'songs');
 		if (OpenFlAssets.exists(leVocals)) { //Vanilla voices
 			audioBuffers[1] = AudioBuffer.fromFile('./' + leVocals.substr(6));
 			//trace('Voices found, LETS FUCKING GOOOO');
+		}
 	}
 	function reloadGridLayer() {
 		gridLayer.clear();
